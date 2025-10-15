@@ -1,12 +1,21 @@
+import { HamIcon } from "lucide-react";
 import { Outlet } from "react-router-dom";
 
 export function AuthLayout() {
     return (
-        <div>
-            <h1>Autenric</h1>
+        <div className="min-h-screen grid grid-cols-2">
+            <div className="h-full  border-r border-foreground/5 bg-muted p-10 text-muted-foreground flex flex-col justify-between">
+                <div className="flex items-center gap-3 text-lg text-foreground">
+                 <HamIcon className="size-5"/>  
+                 <span className="font-semibold">food.shop</span> 
+                </div>
+                <footer className="text-sm">
+                    Painel &copy; food.shop - {new Date().getFullYear()}
+                </footer>
+            </div>
 
-            <div>
-                <Outlet/>
+            <div className="flex flex-col items-center justify-center">
+                <Outlet />
             </div>
         </div>
     )
