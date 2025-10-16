@@ -4,13 +4,16 @@ import { Toaster } from 'sonner'
 
 import './global.css'
 import { router } from './routes'
+import { ThemeProvider } from './components/theme/theme-provider'
 
 export function App() {
   return (
     <HelmetProvider>
-      <Helmet titleTemplate='%s | FoodShop' />
-      <Toaster richColors/>
-      <RouterProvider router={router} />
+      <ThemeProvider storageKey="FoodShop-theme" defaultTheme='system'>
+        <Helmet titleTemplate='%s | FoodShop' />
+        <Toaster richColors />
+        <RouterProvider router={router} />
+      </ThemeProvider>
     </HelmetProvider>
   )
 }

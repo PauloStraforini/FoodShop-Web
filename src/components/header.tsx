@@ -2,6 +2,7 @@ import { HamIcon, Home, UtensilsCrossed } from 'lucide-react'
 
 import { NavLink } from './nav-link'
 import { Separator } from './ui/separator'
+import { ThemeToggle } from './theme/mode-toggle'
 
 export function Header() {
     return (
@@ -10,6 +11,7 @@ export function Header() {
                 <HamIcon className="h-6 w-6" />
 
                 <Separator orientation="vertical" className="h-6" />
+
 
                 <nav className="flex items-center space-x-4 lg:space-x-6">
                     <NavLink to="/">
@@ -21,6 +23,9 @@ export function Header() {
                         Pedidos
                     </NavLink>
                 </nav>
+                <div className='ml-auto flex items-center gap-2'>
+                    <ThemeToggle />
+                </div>
             </div>
         </div>
     )
