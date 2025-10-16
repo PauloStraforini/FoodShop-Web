@@ -3,6 +3,7 @@ import { HamIcon, Home, UtensilsCrossed } from 'lucide-react'
 import { NavLink } from './nav-link'
 import { Separator } from './ui/separator'
 import { ThemeToggle } from './theme/mode-toggle'
+import { AccountMenu } from './acountMenu'
 
 export function Header() {
     return (
@@ -25,6 +26,7 @@ export function Header() {
                 </nav>
                 <div className='ml-auto flex items-center gap-2'>
                     <ThemeToggle />
+                    <AccountMenu/>
                 </div>
             </div>
         </div>
